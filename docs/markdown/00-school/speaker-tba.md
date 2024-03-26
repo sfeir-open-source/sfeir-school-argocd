@@ -2,16 +2,16 @@
 
 # Présentation
 
-![speaker](./assets/images/jf.jpg)
-![badge](./assets/images/gde.png)
+![speaker](./assets/images/tba.jpg)
+![badge](./assets/images/argocd_at_scale.png)
 ![company](./assets/images/logo-sfeir-blanc.png)
 
-## Jean-François Garreau
+## Tanguy BAUDRIN
 
-### CTO front
+### Staff Engineer
 
 <!-- .element: class="icon-rule icon-first" -->
 
-### @jefbinomed
+### @TanguyBAUDRIN
 
 <!-- .element: class="icon-twitter icon-second" -->
