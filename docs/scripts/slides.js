@@ -2,15 +2,15 @@ import { SfeirThemeInitializer } from '../web_modules/sfeir-school-theme/sfeir-s
 
 // One method per module
 function schoolSlides() {
-  return ['00-school/00-TITLE.md', '00-school/speaker-tba.md'];
+  return ['00-school/00-TITLE.md', '00-school/speaker-tba.md', '00-school/speaker-mclt.md'];
 }
 
 function introSlides() {
-  return ['01-intro/00-TITLE.md'];
+  return ['01-intro/00-TITLE.md', '01-intro/01-problematique.md', '01-intro/02-definition.md', '01-intro/03-pull-push.md', '01-intro/04-avantages-inconvenients.md'];
 }
 
 function premierPas() {
-  return ['02-premier_pas/00-TITLE.md'];
+  return ['02-premier_pas/00-TITLE.md', '02-premier_pas/01-installation.md', '02-premier_pas/02-deploiement.md', '02-premier_pas/03-synchronisation.md'];
 }
 
 function argocdQuotidien() {
