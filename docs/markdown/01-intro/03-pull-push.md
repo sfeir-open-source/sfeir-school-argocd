@@ -4,7 +4,7 @@
 
 ##==##
 
-<h1 style="margin-bottom: 10px"> Push method</h1>
+<h1 style="margin-bottom: 10px"> Pull method</h1>
 <div style="width: 200px; height: 10px; background-color: #5155f9"></div>
 <br>
 
@@ -14,7 +14,7 @@
 
 Sécurité :
 - les identifiants sont uniquement stockées au sein du cluster et non partagées depuis l'extérieur
-- un seul point d'entrée pour la modification 
+- un seul point d'entrée pour la modification (on rollback avec un commit )
 - Elle aide à garantir que votre référentiel local est synchronisé avec le référentiel partagé, ce qui réduit le risque de conflits.
 
 Facile : 
@@ -42,7 +42,7 @@ Facile :
 
 ##==##
 
-<h1 style="margin-bottom: 10px"> Pull method</h1>
+<h1 style="margin-bottom: 10px"> Push method</h1>
 <div style="width: 200px; height: 10px; background-color: #5155f9"></div>
 <br>
 

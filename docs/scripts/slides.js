@@ -10,13 +10,14 @@ function introSlides() {
 }
 
 function premierPas() {
-  return ['02-premier_pas/00-TITLE.md', '02-premier_pas/01-installation.md', '02-premier_pas/02-deploiement.md', '02-premier_pas/03-synchronisation.md'];
+  return ['02-premier_pas/00-TITLE.md', '02-premier_pas/01-installation.md', '02-premier_pas/02-composantes.md',
+    '02-premier_pas/03-deploiement.md', '02-premier_pas/04-synchronisation.md', '02-premier_pas/05-more.md'];
 }
 
 function argocdQuotidien() {
   return [
     '03-argocd_quotidien/00-TITLE.md',
-    '03-argocd_quotidien/03-secrets.md',
+    '03-argocd_quotidien/01-boucle-reconciliation.md','03-argocd_quotidien/02-sante-application.md', '03-argocd_quotidien/03-secrets.md',
     '03-argocd_quotidien/04-setup_declaratif.md'
   ];
 }
@@ -34,7 +35,7 @@ function miseAEchelle() {
 }
 
 function usageAvances() {
-  return ['05-usages_avances/00-TITLE.md'];
+  return ['05-usages_avances/00-TITLE.md', '05-usages_avances/04-notifications.md', '05-usages_avances/05-rollout.md'];
 }
 
 function formation() {
