@@ -14,11 +14,23 @@ function premierPas() {
 }
 
 function argocdQuotidien() {
-  return ['03-argocd_quotidien/00-TITLE.md','03-argocd_quotidien/03-secrets.md','03-argocd_quotidien/04-setup_declaratif.md'];
+  return [
+    '03-argocd_quotidien/00-TITLE.md',
+    '03-argocd_quotidien/03-secrets.md',
+    '03-argocd_quotidien/04-setup_declaratif.md'
+  ];
 }
 
 function miseAEchelle() {
-  return ['04-mise_a_l_echelle/00-TITLE.md'];
+  return [
+    '04-mise_a_l_echelle/00-TITLE.md',
+    '04-mise_a_l_echelle/01-apps_of_apps.md',
+    '04-mise_a_l_echelle/02-ApplicationSets.md',
+    '04-mise_a_l_echelle/02-ApplicationSets_list_gen.md',
+    '04-mise_a_l_echelle/02-ApplicationSets_cluster_gen.md',
+    '04-mise_a_l_echelle/02-ApplicationSets_git_gen.md',
+    '04-mise_a_l_echelle/02-ApplicationSets_matrix_gen.md'
+  ];
 }
 
 function usageAvances() {

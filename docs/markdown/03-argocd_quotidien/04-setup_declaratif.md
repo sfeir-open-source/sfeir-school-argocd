@@ -3,10 +3,16 @@
 Setup declaratif
 
 - Projet
+  - CRD AppProject <!-- .element: class="fragment fade-in"-->
+  - Nom du projet <!-- .element: class="fragment fade-in"-->
+  - Dépôts git autorisés pour le déploiement <!-- .element: class="fragment fade-in"-->
+  - Cluster de destinations autorisés <!-- .element: class="fragment fade-in"-->
+  - White/Blacklist de ressources autorisés  <!-- .element: class="fragment fade-in"-->
+  - Périodes de sync autorisées <!-- .element: class="fragment fade-in"-->
 
 ##--##
 
-```yaml [1-2|4-5|7|9-14|16-19|21]
+```yaml [1-7|9-10|11-14|16-19|20]
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
@@ -28,7 +34,7 @@ spec:
 
   syncWindows: [...]
 ```
-<!-- .element: class="r-stretch" -->
+<!-- .element: class="r-stretch fragment fade-in" -->
 
 ##==##
 
