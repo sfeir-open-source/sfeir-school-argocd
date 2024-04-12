@@ -5,10 +5,6 @@
 <br>
 <!-- .slide: class="two-column" -->
 
-<br>
-<br>
-<br>
-
 - Application Controller
   Gère le déploiement, la gestion des applications et leur synchronisation avec l'état d'application souhaité (On appelle ça la réconciliation, on le verra par la suite)
 
@@ -30,7 +26,7 @@
 
 ##--##
 
-```yaml
+```yaml [2|3|4|5|6|7|8]
 NAME                                                READY   STATUS   
 argocd-application-controller-0                     1/1     Running  
 argocd-applicationset-controller-5b99bdcbcc-vt6fd   1/1     Running  

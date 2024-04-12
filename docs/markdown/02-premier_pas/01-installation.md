@@ -5,41 +5,68 @@
 <br>
 <!-- .slide: class="two-column" -->
 
+<div style="font-size: x-large; margin-top: -40px; margin-bottom: 50px;">
+<a href="https://argo-cd.readthedocs.io/en/stable/getting_started/">Quick Start</a>
+</div>
+
 ## Comment on installe ?
 
-https://argo-cd.readthedocs.io/en/stable/getting_started/
+1. Création du namespace 
 
-```yaml
+```bash
 kubectl create namespace argocd
+```
+<br>
+
+2. Déploiement des composants
+
+via _kubectl_
+```bash
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
-Possibilité de ne pas avoir l'interface et de tout gérer en CLI avec le CLI _argocd_
+via _helm_
 ```bash
-brew install argocd
+helm repo add argo https://argoproj.github.io/argo-helm
+
+helm install my-argocd argo/argo-cd
 ```
 
-Possibilité de le faire en Helm avec les values qui nous permettent de configurer très facilement (on le fera par la suite dans les prochains TP)
+<br>
 
-On a pas encore d'ingress donc on port-forward
+3. CLI ArgoCD
+
+```bash
+brew install argocd  
+
+curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+chmod +x /usr/local/bin/argocd  
+```
+```bash
+argocd version --client
+```
+
+##--##
+
+4. Accès à l'interface Web
+
 ```bash
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
 
-Compte par défaut 
-username: admin
-password: 
+<div style="margin-left: 50px;">
+    <img class="h-300" src="./assets/images/login.png">
+</div>
+
+5. Compte par défaut
+
+   - _username : admin_ 
+   - _password : default-password_
+   <br>
+   <br>
 ```bash
 kubectl get secret -n argocd argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
-
-On a la possibilité de modifier le mot de passe soit en modifiant le secret / ou values Helm / ou CLI
-
-Ducoup maintenant on a argoCD qui est déployé, on peut donc utiliser l'interface ou le CLI
-
-
-##--##
 <br>
-<br>
-<br>
-<br>
+
+PS : Le mot de passe peut être modifié

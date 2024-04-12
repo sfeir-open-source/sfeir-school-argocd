@@ -7,38 +7,25 @@
 
 <br>
 <br>
+
+- Mon déploiement a échoué, comment corriger rapidement ? <!-- .element: class="fragment fade-in-then-semi-out"-->
+- Je ne comprends pas les procédures de déploiement <!-- .element: class="fragment fade-in-then-semi-out"-->
+- Déployer ça me prend du temps <!-- .element: class="fragment fade-in-then-semi-out"-->
+- Comment on déploie ? <!-- .element: class="fragment fade-in-then-semi-out"-->
+- J'ai une erreur dans ma configuration, comment faire ? comment déboguer ? <!-- .element: class="fragment fade-in-then-semi-out"-->
+
+<br>
+<br>
 <br>
 
-- Mon déploiement a échoué, comment corriger rapidement ?
-- Je ne comprends pas les procédures de déploiement 
-- Déployer ça me prend du temps
-- Comment on déploie ? 
-- J'ai une erreur dans ma configuration, comment faire ? comment déboguer ?
-
-==> on veut aider les développeurs dans leur quotidien et dans leur efficacité de livraison
+🚀 **Faciliter et améliorer la livraison produit** 🚀<!-- .element: class="fragment fade-in-then-semi-out"-->
 
 ##--##
-<br>
-<br>
-<br>
-<br>
-
-<div class="center" style="width: fit-content; box-shadow: 0px 0px 20px 0; margin-left: 35px;">
-    <img class="h-450" src="./assets/images/CI.png">
-</div>
-
-##==##
-
-<h1 style="margin-bottom: 10px"> Le GitOps c'est quoi ? </h1>
-<div style="width: 200px; height: 10px; background-color: #5155f9"></div>
-<br>
-<blockquote style="text-align: center">
-<cite>
-  Ensemble de pratiques permettant de contrôler son infrastructure distante de manière déclarative
-</cite>
-</blockquote>
 
 <br>
-<div class="center" style="width: fit-content;">
-    <img class="h-500" src="./assets/images/gitops.png">
-</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<img class="center h-400" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmpvM2x6ZDhyM3F0OGVqbTJ6MndhcG04ano0cjdkeW5ua3J5amJ5NyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/DZYtNkqkw23YvXYjAe/giphy.gif">

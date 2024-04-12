@@ -6,7 +6,7 @@ function schoolSlides() {
 }
 
 function introSlides() {
-  return ['01-intro/00-TITLE.md', '01-intro/01-problematique.md', '01-intro/02-definition.md', '01-intro/03-pull-push.md', '01-intro/04-avantages-inconvenients.md'];
+  return ['01-intro/00-TITLE.md', '01-intro/01-problematique.md', '01-intro/02-definition.md', '01-intro/04-pull-push.md'];
 }
 
 function premierPas() {
