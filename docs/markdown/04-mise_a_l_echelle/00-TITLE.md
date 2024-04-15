@@ -1,3 +1,3 @@
 <!-- .slide: class="transition bg-pink" -->
 
-# Mise à l'échelle
+# Automatisation de la configuration d'ArgoCD

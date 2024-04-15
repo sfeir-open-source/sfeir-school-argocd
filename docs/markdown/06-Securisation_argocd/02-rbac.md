@@ -21,7 +21,7 @@ argocd admin settings rbac validate --policy-file argocd-rbac-cm.yaml
 ```
 - Test
 ```shell
-argocd admin settings rbac validate --namespace argocd
+argocd admin settings rbac can SOMEROLE ACTION RESOURCE SUBRESOURCE
 ```
 
 ##==##

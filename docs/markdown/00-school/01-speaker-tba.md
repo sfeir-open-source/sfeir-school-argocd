@@ -3,8 +3,11 @@
 # Présentation
 
 ![speaker](./assets/images/tba.jpg)
-![badge](./assets/images/argocd_at_scale.png)
 ![company](./assets/images/logo-sfeir-blanc.png)
+![badge first-badge](./assets/images/google-devops-engineer.png)
+![badge second-badge](./assets/images/google-authorized-trainer.png)
+![badge third-badge](./assets/images/argocd_at_scale.png)
+
 
 ## Tanguy BAUDRIN
 

@@ -1,3 +1,3 @@
 <!-- .slide: class="transition bg-pink" -->
 
-# Sécurisation ArgoCD
+# Sécurisation des déploiements

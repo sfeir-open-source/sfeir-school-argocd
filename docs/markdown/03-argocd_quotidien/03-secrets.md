@@ -1,9 +1,6 @@
 <!-- .slide: class="two-column" data-background="./assets/images/secrets.jpg" -->
-
 ##--##
-
-## Comment garder des secrets dans un déôt git ?
-
+# Comment garder des secrets dans un dépôt git ?
 - Ne pas stocker dans git<!-- .element: class="fragment fade-in-then-semi-out"-->
     - Utiliser un gestionnaire de secret externe (Vault, etc...) 
 - Stocker dans git<!-- .element: class="fragment fade-in-then-semi-out" -->

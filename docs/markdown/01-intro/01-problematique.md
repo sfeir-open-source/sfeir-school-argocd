@@ -18,7 +18,7 @@
 <br>
 <br>
 
-🚀 **Faciliter et améliorer la livraison produit** 🚀<!-- .element: class="fragment fade-in-then-semi-out"-->
+<p style="font-weight: bold;">🚀 Faciliter et améliorer la livraison produit🚀</p><!-- .element: class="fragment fade-in-then-semi-out"-->
 
 ##--##
 
