@@ -11,18 +11,30 @@ function schoolSlides() {
 }
 
 function introSlides() {
-  return ['01-intro/00-TITLE.md', '01-intro/01-problematique.md', '01-intro/02-definition.md', '01-intro/04-pull-push.md'];
+  return [
+    '01-intro/00-TITLE.md',
+    '01-intro/01-problematique.md',
+    '01-intro/02-definition.md',
+    '01-intro/04-pull-push.md'
+  ];
 }
 
 function premierPas() {
-  return ['02-premier_pas/00-TITLE.md', '02-premier_pas/01-installation.md', '02-premier_pas/02-composantes.md',
-    '02-premier_pas/03-deploiement.md', '02-premier_pas/04-synchronisation.md', '02-premier_pas/05-more.md'];
+  return [
+    '02-premier_pas/00-TITLE.md',
+    '02-premier_pas/01-installation.md',
+    '02-premier_pas/02-composantes.md',
+    '02-premier_pas/03-deploiement.md',
+    '02-premier_pas/04-synchronisation.md',
+    '02-premier_pas/05-more.md'];
 }
 
 function argocdQuotidien() {
   return [
     '03-argocd_quotidien/00-TITLE.md',
-    '03-argocd_quotidien/01-boucle-reconciliation.md', '03-argocd_quotidien/02-sante-application.md', '03-argocd_quotidien/03-secrets.md',
+    '03-argocd_quotidien/01-boucle-reconciliation.md',
+    '03-argocd_quotidien/02-sante-application.md',
+    '03-argocd_quotidien/03-secrets.md',
     '03-argocd_quotidien/04-setup_declaratif.md'
   ];
 }
@@ -50,7 +62,11 @@ function usageAvances() {
 }
 
 function securisation() {
-  return ['06-Securisation_argocd/00-TITLE.md', '06-Securisation_argocd/01-app_projects.md', '06-Securisation_argocd/02-rbac.md'];
+  return [
+    '06-Securisation_argocd/00-TITLE.md',
+    '06-Securisation_argocd/01-app_projects.md',
+    '06-Securisation_argocd/02-rbac.md'
+  ];
 }
 
 function formation() {
