@@ -5,28 +5,52 @@
 <br>
 <!-- .slide: class="two-column" -->
 
-- Application Controller
-  Gère le déploiement, la gestion des applications et leur synchronisation avec l'état d'application souhaité (On appelle ça la réconciliation, on le verra par la suite)
+- **Application Controller** 
+  - Déploiement
+  - Gestion des applications
+  - Synchronisation
 
-- ApplicationSet Controller
-  Gère les ensembles d'applications, qui sont des groupes d'applications déployées ensemble.
+<br>
+<br>
 
-- Dex Server
-  Fournit l'authentification et l'autorisation pour Argo CD par défaut (Peut être remplacé par d'autres outils)
+- **ApplicationSet Controller**
+  - Gère les ensembles d'applications
 
-- Redis
-  Stocke les données de configuration et d'état pour Argo CD.
+<br>
+<br>
 
-- Repo Server
-  Le Repo Server d'Argo CD interagit avec le référentiel Git pour générer l'état souhaité de toutes les ressources Kubernetes d'une application.
+- **Dex Server** (par défaut, peut êre remplacé)
+  - Authentification
+  - Autorisation
 
-- Server
-  Fournit l'interface utilisateur et l'API pour Argo CD.
+<br>
+<br>
+
+- **Redis**
+  - Données de configuration
+  - Etats de configuration
 
 
 ##--##
 
-```yaml [2|3|4|5|6|7|8]
+- **Repo Server**
+  - Intéraction avec le référentiel Git
+  - Génération des manifests
+
+<br>
+<br>
+
+- **Server**
+  - Interface utilisateur
+  - API
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+```yaml [2|3|4|5|6|7]
 NAME                                                READY   STATUS   
 argocd-application-controller-0                     1/1     Running  
 argocd-applicationset-controller-5b99bdcbcc-vt6fd   1/1     Running  

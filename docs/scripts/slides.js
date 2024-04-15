@@ -47,7 +47,9 @@ function miseAEchelle() {
     '04-mise_a_l_echelle/02-ApplicationSets_list_gen.md',
     '04-mise_a_l_echelle/02-ApplicationSets_cluster_gen.md',
     '04-mise_a_l_echelle/02-ApplicationSets_git_gen.md',
-    '04-mise_a_l_echelle/02-ApplicationSets_matrix_gen.md'
+    '04-mise_a_l_echelle/02-ApplicationSets_matrix_gen.md',
+    '04-mise_a_l_echelle/03-image-updater.md',
+    '04-mise_a_l_echelle/04-pipeline-integration.md',
   ];
 }
 

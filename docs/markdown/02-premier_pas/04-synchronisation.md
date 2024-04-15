@@ -6,26 +6,39 @@
 <!-- .slide: class="two-column" -->
 
 <br>
+
+- **Prune** : Suppression des ressources
 <br>
 <br>
-
-- Suppression des ressources (Prune)
-- Validation kubectl (Validate)
-- Ignorer le dry run pour les types de ressources personnalisées manquants (SkipDryRunOnMissingResource)
-- Ne pas supprimer les ressources (Delete)
-- Synchroniser uniquement les ressources désynchronisées (ApplyOutOfSyncOnly)
-- Contrôler la politique de propagation de suppression (PrunePropagationPolicy)
-- Effectuer la suppression en dernier (PruneLast)
-- Remplacer les ressources au lieu de les appliquer (Replace)
-- Activer l'application côté serveur (ServerSideApply)
-- Faire échouer la synchronisation si une ressource partagée est trouvée (FailOnSharedResource)
-- Respecter les configurations d'ignorance des différences (RespectIgnoreDifferences)
-- Créer l'espace de noms (CreateNamespace)
-
-+ DEMO
+- **Validate** : Validation kubectl
+<br>
+<br>
+- **SkipDryRunOnMissingResource** : Ignorer le dry run pour les types de ressources personnalisées manquants
+<br>
+<br>
+- **Delete** : Ne pas supprimer les ressources
+<br>
+<br>
+- **ApplyOutOfSyncOnly** : Synchroniser uniquement les ressources désynchronisées
+<br>
+<br>
+- **PrunePropagationPolicy** : Contrôler la politique de propagation de suppression
 
 ##--##
-<br>
-<br>
-<br>
-<br>
+
+- **PruneLast** : Effectuer la suppression en dernier
+  <br>
+  <br>
+- **Replace** : Remplacer les ressources au lieu de les appliquer
+  <br>
+  <br>
+- **ServerSideApply** : Activer l'application côté serveur
+  <br>
+  <br>
+- **FailedOnSharedResource** : Faire échouer la synchronisation si une ressource partagée est trouvée
+  <br>
+  <br>
+- **RespectIgnoreDifferences** : Respecter les configurations d'ignorance des différences
+  <br>
+  <br>
+- **CreateNamespace** : Créer l'espace de noms
