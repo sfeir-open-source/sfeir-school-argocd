@@ -1,6 +1,6 @@
 <!-- .slide: class="with-code max-height"-->
-# Générateurs Matrix
-## Matrix est un générateur combinatoire permettant de combiner des générateurs "enfants"
+# Générateur Matrix
+### Matrix est un générateur combinatoire permettant de combiner des générateurs "enfants"
 - Matrix va générer toutes les combinaisons possible de 2 générateurs enfants
 - Possibilité d'utiliser n'importe quels générateurs comme générateurs enfants
   ```
@@ -27,7 +27,7 @@
 <!-- .element: class="credits" -->
 ##==##
 # Générateurs Merge
-## Merge est également un générateur combinatoire permettant de combiner des générateurs "enfants"
+### Merge est également un générateur combinatoire permettant de combiner des générateurs "enfants"
 - Merge va fusionner les paramètres de différents générateurs des générateur supplémentaires avec le générateur de base.
 - Possibilité d'utiliser n'importe quels générateurs comme générateurs enfants
 
@@ -36,7 +36,7 @@
 ##==##
 <!-- .slide: class="with-code max-height"-->
 # Générateur merge
-## Example
+### Example
 ```yaml
 - merge:
     mergeKeys:
@@ -65,7 +65,7 @@
 <!-- .element: class="credits" -->
 ##==##
 # Générateur merge
-## Résultat
+### Résultat
 - En ayant ses deux clusters configurés:
   ```yaml
   - name: staging
@@ -89,12 +89,16 @@
 <!-- .element: class="credits" -->
 ##==##
 # Générateur merge et matrix
-- On peut avoir un, ou plusieurs, générateurs combinatoire comme enfant d'un générateur combinatoire
+- On peut avoir un, ou plusieurs, générateurs combinatoire comme enfant d'un générateur combinatoire 
+<!-- .element: class="fragment fade-in" -->
 
-// TODO Insert gif mindblowing
+![center](./assets/images/mind-blowing.gif)
+<!-- .element: class="fragment fade-in" -->
 
 - Mais on ne peux avoir qu'un sous-niveau (merge=>merge, mais pas merge=>merge=>merge)
+<!-- .element: class="fragment fade-in" -->
 - Ce n'est pas parce qu'on peut le faire qu'il faut le faire, l'utilisation des générateurs combinatoire complexifie la lecture et rends difficile la maintenance
+<!-- .element: class="fragment fade-in" -->
 
 [Générateur merge documentation](https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators-Merge/)
 <!-- .element: class="credits" -->

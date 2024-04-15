@@ -1,5 +1,6 @@
 <!-- .slide: class="with-code max-height"-->
-# Générateur liste
+# ApplicationSet avec générateur liste
+### Définition
 ```yaml [1-4|5,6,11|6-10|11-20|13,17,19]
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
@@ -27,13 +28,10 @@ spec:
 <!-- .element: class="credits" -->
 
 ##==##
-<!-- .slide: class="two-column-layout"-->
-# Générateur liste résultat
-
+<!-- .slide: class="two-column"-->
 [Générateur liste documentation](https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators-List/)
 <!-- .element: class="credits" -->
-##--##
-## Dev
+# Application dev générée
 ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -47,8 +45,9 @@ spec:
     server: 'cluster-dev'
     namespace: my-app
 ```
+
 ##--##
-## Prd
+# Application prd générée
 ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application

@@ -2,7 +2,12 @@ import { SfeirThemeInitializer } from '../web_modules/sfeir-school-theme/sfeir-s
 
 // One method per module
 function schoolSlides() {
-  return ['00-school/00-TITLE.md', '00-school/speaker-tba.md', '00-school/speaker-mclt.md'];
+  return [
+    '00-school/00-TITLE.md',
+    '00-school/01-speaker-tba.md',
+    '00-school/02-speaker-mclt.md',
+    '00-school/03-you.md'
+  ];
 }
 
 function introSlides() {
@@ -17,7 +22,7 @@ function premierPas() {
 function argocdQuotidien() {
   return [
     '03-argocd_quotidien/00-TITLE.md',
-    '03-argocd_quotidien/01-boucle-reconciliation.md','03-argocd_quotidien/02-sante-application.md', '03-argocd_quotidien/03-secrets.md',
+    '03-argocd_quotidien/01-boucle-reconciliation.md', '03-argocd_quotidien/02-sante-application.md', '03-argocd_quotidien/03-secrets.md',
     '03-argocd_quotidien/04-setup_declaratif.md'
   ];
 }
@@ -35,7 +40,17 @@ function miseAEchelle() {
 }
 
 function usageAvances() {
-  return ['05-usages_avances/00-TITLE.md', '05-usages_avances/04-notifications.md', '05-usages_avances/05-rollout.md'];
+  return [
+    '05-usages_avances/00-TITLE.md',
+    '05-usages_avances/01-sync_waves.md',
+    '05-usages_avances/02-sync_windows.md',
+    '05-usages_avances/04-notifications.md',
+    '05-usages_avances/05-rollout.md'
+  ];
+}
+
+function securisation() {
+  return ['06-Securisation_argocd/00-TITLE.md', '06-Securisation_argocd/01-app_projects.md', '06-Securisation_argocd/02-rbac.md'];
 }
 
 function formation() {
@@ -47,6 +62,7 @@ function formation() {
     ...argocdQuotidien(), //
     ...miseAEchelle(), //
     ...usageAvances(), //
+    ...securisation(), //
   ].map((slidePath) => {
     return { path: slidePath };
   });

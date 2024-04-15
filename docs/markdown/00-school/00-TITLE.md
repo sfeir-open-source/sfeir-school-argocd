@@ -1,8 +1,8 @@
-<!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="xxx" -->
+<!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="ArgoCD" -->
 
 # **Welcome to SFEIR School**
 
-## **ArgoCD 100**
+## **ArgoCD 200**
 
 ##==##
 
@@ -23,21 +23,20 @@ Credentials
 <!-- .element: class="center" -->
 <br>
 
-![sfeir-icons big](user)<!-- .element: style="--icon-color:var(--light-grey);" --> SSID
-
-![sfeir-icons big](lock)<!-- .element: style="--icon-color:var(--light-grey);" --> PWD
-
 ##==##
 
 # Déroulement de la formation
 
-<p class="center">
-C'est quand la pause ?<br>
-Quand est-ce qu'on mange ?<br>
-Tour de table ...
-</p>
-<br><br>
+## Logistique
+- C'est quand la pause ?
+- Quand est-ce qu'on mange ?
+<br/>
+<br/>
 
-**Feuille de présence (obligatoire)** <!-- .element: class="center" -->
+## Ressources
+![sfeir-icons](github) [sfeir-open-source/sfeir-school-argocd](https://github.com/sfeir-open-source/sfeir-school-argocd)
+<br/>
+<br/>
 
-https://bit.ly/sfeir-xxx <!-- .element: class="center" -->
+## Feuille de présence (obligatoire)
+A venir

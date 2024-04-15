@@ -1,6 +1,6 @@
 <!-- .slide: class="with-code max-height"-->
 # Utilisation du générateur Git
-## Dépôt git à déployer
+### Exemple de dépôt git
 ```
 └──deploy
     ├── micro-service-1
@@ -18,7 +18,8 @@
 
 ##==##
 <!-- .slide: class="with-code max-height"-->
-# Générateur git exemple
+# Application set avec le générateur git
+### Définition
 ```yaml [6-11|13-22]
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
@@ -47,13 +48,11 @@ spec:
 <!-- .element: class="credits" -->
 
 ##==##
-<!-- .slide: class="two-column-layout"-->
-# Générateur git résultat
+<!-- .slide: class="two-column"-->
+# Application micro service 1
 
 [Générateur git documentation](https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators-Git/)
 <!-- .element: class="credits" -->
-##--##
-Micro service 1
 ```yaml
 metadata:
     name: 'micro-service-1'
@@ -66,7 +65,7 @@ spec:
         namespace: 'micro-service-1'
 ```
 ##--##
-Micro service 2
+# Application micro service 2
 ```yaml
 metadata:
     name: 'micro-service-2'
@@ -79,7 +78,8 @@ spec:
         namespace: 'micro-service-2'
 ```
 ##==##
-# Générateur git, autres options
+# Générateur git
+### Autres options
 - Exclure des répertoires en precisant des "paths" avec `exclude:true`
 - Possibilité d'ajouter des values (cf. générateur cluster)
 - `files` au lieu de `directories, qui ira chercher des fichiers de configuration (json) avec des paires de clef/valeur pour générer les application

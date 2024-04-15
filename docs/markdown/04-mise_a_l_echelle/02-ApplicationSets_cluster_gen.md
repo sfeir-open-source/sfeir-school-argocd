@@ -1,5 +1,6 @@
 <!-- .slide: class="with-code max-height"-->
-# Déclaration des cluster dans ArgoCD
+# Les clusters dans ArgoCD
+### Définition
 ```yaml [1|2-5|6-8|9-10|1-21]
 kind: Secret
 data:
@@ -29,7 +30,8 @@ metadata:
 
 ##==##
 <!-- .slide: class="with-code max-height"-->
-# Générateur cluster exemple
+# ApplicationSet utilisant le générateur cluster
+### Définition
 ```yaml [6|7-12|8-10|11-12|14-22]
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
@@ -59,13 +61,10 @@ spec:
 <!-- .element: class="credits" -->
 
 ##==##
-<!-- .slide: class="two-column-layout"-->
-# Générateur cluster résultat
-
+<!-- .slide: class="two-column"-->
+# Application région 1
 [Générateur cluster documentation](https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/Generators-Cluster/)
 <!-- .element: class="credits" -->
-##--##
-Region 1
 ```yaml
 metadata:
     name: 'my-app-dev-region-1'
@@ -78,7 +77,7 @@ spec:
         namespace: my-app-dev
 ```
 ##--##
-Region 2
+# Application région 2
 ```yaml
 metadata:
     name: 'my-app-dev-region-2'
