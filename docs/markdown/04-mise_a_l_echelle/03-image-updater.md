@@ -80,7 +80,7 @@ argocd-image-updater-6d8757f4f4-xj96h               1/1     Running   0         
 
 ## Configuration
 
-Stratégie de mise à jour
+🔄 Stratégie de mise à jour
 
 - semver : Dernière version d'une image selon la version sémantique (défaut) <!-- .element: class="fragment fade-in-then-semi-out" -->
 - latest : Dernière image <!-- .element: class="fragment fade-in-then-semi-out" -->
@@ -99,11 +99,14 @@ metadata:
     argocd-image-updater.argoproj.io/myimage.allow-tags: regexp:^[0-9a-f]{7}$
     argocd-image-updater.argoproj.io/myimage.ignore-tags: latest, master
 ```
+<!-- .element: class="fragment fade-in-then-semi-out" -->
 
 ##--##
 
-Stratégie d'écriture
 
+📝 Stratégie d'écriture
+
+<br>
 
 ```yaml[1-2|3|4|5]
 metadata:
@@ -112,17 +115,22 @@ metadata:
     argocd-image-updater.argoproj.io/git-branch: main
     argocd-image-updater.argoproj.io/write-back-target: kustomization
 ```
+<!-- .element: class="fragment fade-in-then-semi-out" -->
+
 <br>
 
-On peut également checkout la branche de base et proposer les modifs sur une autre branche 
+- Proposition de modifications
+<!-- .element: class="fragment fade-in-then-semi-out" -->
 
 ```yaml
 argocd-image-updater.argoproj.io/git-branch: main:image-updater{{range .Images}}-{{.Name}}-{{.NewTag}}{{end}}
 ```
+<!-- .element: class="fragment fade-in-then-semi-out" -->
 
 <br>
 
-Personalisation du commit message dans la ConfigMap
+- Personalisation du commit message 
+<!-- .element: class="fragment fade-in-then-semi-out" -->
 
 ```yaml
 apiVersion: v1
@@ -137,6 +145,7 @@ data:
     updates image {{ .Image }} tag '{{ .OldTag }}' to '{{ .NewTag }}'
     {{ end -}}
 ```
+<!-- .element: class="fragment fade-in-then-semi-out" -->
 
 
 
