@@ -6,14 +6,10 @@
 <!-- .slide: class="two-column" -->
 
 <br>
+<br>
+<br>
 
 - **Prune** : Suppression des ressources
-<br>
-<br>
-- **Validate** : Validation kubectl
-<br>
-<br>
-- **SkipDryRunOnMissingResource** : Ignorer le dry run pour les types de ressources personnalisées manquants
 <br>
 <br>
 - **Delete** : Ne pas supprimer les ressources
@@ -26,19 +22,19 @@
 
 ##--##
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
 - **PruneLast** : Effectuer la suppression en dernier
   <br>
   <br>
 - **Replace** : Remplacer les ressources au lieu de les appliquer
   <br>
   <br>
-- **ServerSideApply** : Activer l'application côté serveur
-  <br>
-  <br>
 - **FailedOnSharedResource** : Faire échouer la synchronisation si une ressource partagée est trouvée
-  <br>
-  <br>
-- **RespectIgnoreDifferences** : Respecter les configurations d'ignorance des différences
   <br>
   <br>
 - **CreateNamespace** : Créer l'espace de noms
