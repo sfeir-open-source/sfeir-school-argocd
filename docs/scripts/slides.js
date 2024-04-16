@@ -58,8 +58,7 @@ function usageAvances() {
     '05-usages_avances/00-TITLE.md',
     '05-usages_avances/01-sync_waves.md',
     '05-usages_avances/02-sync_windows.md',
-    '05-usages_avances/04-notifications.md',
-    '05-usages_avances/05-rollout.md'
+    '05-usages_avances/04-notifications.md'
   ];
 }
 
