@@ -7,8 +7,8 @@ Observer le comportement puis déployer
 Connexion au cluster Kubernetes
 ================
 ```
-wget https://storage.googleapis.com/sfeir-school-1704/<prénom>-<nom>.kubeconfig -o ~/.kube/school.kubeconfig
-export KUBE_CONFIG=~/.kube/school.kubeconfig
+wget https://storage.googleapis.com/sfeir-school-1704/<prénom>-<nom>.kubeconfig -O ~/.kube/school.kubeconfig
+export KUBECONFIG=~/.kube/school.kubeconfig
 ```
 
 🔨 TP
