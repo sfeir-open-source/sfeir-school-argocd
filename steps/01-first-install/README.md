@@ -4,6 +4,12 @@
 Installer ArgoCD et déployer une application sans synchronisation automatique.  
 Observer le comportement puis déployer
 
+Connexion au cluster Kubernetes
+================
+```
+wget https://storage.googleapis.com/sfeir-school-1704/<prénom>-<nom>.kubeconfig -o ~/.kube/school.kubeconfig
+export KUBE_CONFIG=~/.kube/school.kubeconfig
+```
 
 🔨 TP
 ==
