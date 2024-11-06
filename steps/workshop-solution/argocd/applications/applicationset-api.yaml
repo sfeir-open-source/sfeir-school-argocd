@@ -1,0 +1,62 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: "appset-api"
+  namespace: argocd
+spec:
+  goTemplate: true
+  #ignoreApplicationDifferences:
+  #  - jsonPointers:
+  #      - /spec/syncPolicy
+  generators:
+    - list:
+        elements:
+          - path: "app/api/dev"
+            env: "dev"
+            autoSync: true
+          - path: "app/api/itg"
+            env: "itg"
+            autoSync: false
+          - path: "app/api/prd"
+            env: "prd"
+            autoSync: false
+
+  template:
+    metadata:
+      annotations:
+        argocd-image-updater.argoproj.io/write-back-method: git
+        argocd-image-updater.argoproj.io/write-back-target: kustomization
+        argocd-image-updater.argoproj.io/git-branch: "main"
+        argocd-image-updater.argoproj.io/image-list: "public.ecr.aws/nginx/nginx"
+        #argocd-image-updater.argoproj.io/image.allow-tags: "regexp:*$"
+        #argocd-image-updater.argoproj.io/update-strategy: semver
+        argocd-image-updater.argoproj.io/force-update: "true"
+        notifications.argoproj.io/subscribe.on-sync-succeeded.github: ""
+      namespace: "api-{{.env}}"
+      name: "app-api-{{.env}}"
+      labels:
+        name: "api-{{.env}}"
+    spec:
+      project:  api-project
+      source:
+        repoURL: git@github.com:MatClt/argocd-demo.git
+        targetRevision: "main"
+        path: "{{.path}}"
+      destination:
+        namespace: "api-{{.env}}"
+        server: https://kubernetes.default.svc
+      syncPolicy:
+        managedNamespaceMetadata:
+          labels:
+            argo-deployed: "true"
+        syncOptions:
+          - CreateNamespace=true
+          - PruneLast=true
+          - FailOnSharedResource=true
+
+  templatePatch: |
+    {{- if .autoSync }}
+      spec:
+        syncPolicy:
+          automated: {}
+    {{- end }}

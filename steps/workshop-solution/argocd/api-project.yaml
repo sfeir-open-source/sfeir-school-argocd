@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: api-project
+spec:
+  description: Project bringing together all security configurations of api applications
+  sourceRepos:
+    - 'git@github.com:MatClt/argocd-demo.git'
+  destinations:
+    - namespace: "api-dev"
+      server: "https://kubernetes.default.svc"
+    - namespace: "api-itg"
+      server: "https://kubernetes.default.svc"
+    - namespace: "api-prd"
+      server: "https://kubernetes.default.svc"
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  orphanedResources:
+    warn: true
+  syncWindows:
+  - kind: deny
+    schedule: '0 10 * * *'
+    timeZone: "Europe/Amsterdam"
+    duration: 1h
+    applications:
+      - '*-prd'
+      - '*-itg'
+    manualSync: false
+    clusters:
+      - https://kubernetes.default.svc
+    #namespaces:
+    #- default

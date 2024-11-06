@@ -1,0 +1,64 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+  namespace: argocd
+spec:
+  project: default
+  sources:
+    - chart: argo-cd
+      repoURL: https://argoproj.github.io/argo-helm
+      targetRevision: 7.6.12
+      helm:
+        releaseName: my-argocd
+        valuesObject:
+          configs:
+            cm:
+              timeout.reconciliation: 60s
+              kustomize.buildOptions: --enable-helm --load-restrictor LoadRestrictionsNone
+            params:
+              server.insecure: true
+              server.disable.auth: true
+
+          notifications:
+            cm:
+              create: false
+            secret:
+              items:
+                github-privateKey: |
+                  -----BEGIN RSA PRIVATE KEY-----
+                  MIIEpAIBAAKCAQEArJpRGQ7xZ/xJdzDhGiTUoaQoR33Lm7KIQX9oTA6mAuLXLigJ
+                  gEE5IrwUXfVlFX9AP2+8FHpNARSQ1KkQt7TsX+Hu1VKU9C8NZ9EboGJktpblv/zp
+                  Tvrrs/Fr+sRsb/4FO7IBO6GtqJ0TGMRel7fJM+bZ6//lASIpH92YgGKkDg3F3z/3
+                  U0ySe57rzGt0WYbf7ur69RVr/vjsoGvPtzPR+jF7jQjZRZgbm+lghbjbI15KPue1
+                  TPTMuTs7jVhbw4F19qLVmoNva1WoVouTI4OB0Qy1jokAdGaceGTZVoNm1KrMdrBY
+                  L9FbIw+ue4Ix9FfbHWOtkhzujV6LkA00JKomEQIDAQABAoIBACw+NjGFKg4slixO
+                  RDUuYa65ZHXG4g0b+19GqFZuntE4kk3Lh3vvvBSSP2pCP9H911srafuZyelP+zv3
+                  xkhAwSJmyJC35WSeNwJ4kGtRLV28WlIXIzrSiN6MMNCLzvv6Eh9WJojBjcEd2kpL
+                  869SNenu78dVxb6/oekAJVorbsAHDbsauakJ4xrm6Ufp3yZN48YDnJgrLZGltMnS
+                  Q4cJT5UKESJEU0KCU7Gzdzhh4Bu4Dr/CkeEG7s0RL+c96tweU5624zv5E0xoEcve
+                  reB+L+KaggMireiqQVw8nAtkD8HJPUrpAz1oUEGBj0nf54Zx8X4uNF0GEWHKkQha
+                  JSrvNAECgYEA4a1h3dBbcbb6AG6jDqUAKuylxXM9cSQ0BqqO8I2r4Oc6MX7guJQc
+                  XBKZDpSRmJSmbckyAItMwh9ZAlIMv6xgHHx49Bq0i20GGjCRQgMCl9mA6cy1Hxj9
+                  7Kih4csMN12IL5k2R9otAyIudDkKQgJbh43OVVjOQbSS0PFXLYQcrFECgYEAw8tV
+                  JnvFb4LjPn9tnhofwE1sWUbH4FN9Al+DlMLG4nRdIP8QKfnzfkCHo4yW+DpSdCbQ
+                  B4KpR0R/7rTUQZ2oR5YDRBkEMUc9MG3t2vIlQsSQzNg0BcH+0i7qFMnWUfvppe4Z
+                  ELWIVvCALGp/mK5wctRUxMh0uIWnEQ6MID4iLcECgYEAg6U2j8Q5c64/S/0+FQ7f
+                  eCqv0OyWjOeHidP4qg6akwmPgsv2nvWXTYZzznOQMyeTpjtVdcfMsPjEXXwrf6w4
+                  LKXXkN37L9IbWy+1rIJBAv+YGcqWZVuY1HLSa/qcV7ex98IyTdvRoiBQZO/ZMgRa
+                  DEsGb/br6pxBgK0oI58LcuECgYEAtOzf8n/NIg5BDy+Ri9d4H6trw9O0P4bmrZq1
+                  bHHQdtIwfJ01wpRGfRQEQw1XNGowZ0S2VzpWUpTp4xsWSMv3BK+KtRKo3SCHWok6
+                  kmfQJrKdW60t5WQupOrVRAB/G6M9dSdf4iDdq/jxeBmxbtVC89lhu7XApgJbL1fS
+                  BLllvAECgYBRI5BWAHFcDCpTe/asWH4BSSB4VvMZgRleGoYFcYfRotpIJFOch7lG
+                  vpqAPKvX2cyi4HupgYdQt8bBz6OvNLsMPgLdnxNy1YY/0Uj/J+UyBQ7WocBjeMtX
+                  LpcBnVjx3RSehQ1FW5Q5Zqtgy1HWiNvPv1K9gbf+3Mcu1mIlPFWviw==
+                  -----END RSA PRIVATE KEY-----
+
+  destination:
+      server: https://kubernetes.default.svc
+      namespace: argocd
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+      - PruneLast=true
+      - FailOnSharedResource=true

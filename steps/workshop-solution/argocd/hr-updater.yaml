@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-image-updater
+  namespace: argocd
+spec:
+  project: default
+  sources:
+    - chart: argocd-image-updater
+      repoURL: https://argoproj.github.io/argo-helm
+      targetRevision: 0.11.0
+      helm:
+        valuesObject:
+          config:
+            registries:
+              - name: ECR
+                api_url: https://public.ecr.aws
+                prefix: public.ecr.aws
+                ping: yes
+                default: true
+                insecure: no
+
+          extraArgs:
+            - --interval
+            - 10s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+      - PruneLast=true
+      - FailOnSharedResource=true
