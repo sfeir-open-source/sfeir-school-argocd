@@ -39,7 +39,7 @@ spec:
     spec:
       project:  api-project
       source:
-        repoURL: git@github.com:MatClt/argocd-demo.git
+        repoURL: git@github.com:sfeir-open-source/sfeir-school-argocd.git
         targetRevision: "main"
         path: "{{.path}}"
       destination:
