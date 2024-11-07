@@ -11,13 +11,13 @@ spec:
   generators:
     - list:
         elements:
-          - path: "app/api/dev"
+          - path: "steps/workshop-solution/app/api/dev"
             env: "dev"
             autoSync: true
-          - path: "app/api/itg"
+          - path: "steps/workshop-solution/app/api/itg"
             env: "itg"
             autoSync: false
-          - path: "app/api/prd"
+          - path: "steps/workshop-solution/app/api/prd"
             env: "prd"
             autoSync: false
 
