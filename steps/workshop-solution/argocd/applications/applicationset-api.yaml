@@ -37,7 +37,7 @@ spec:
       labels:
         name: "api-{{.env}}"
     spec:
-      project:  api-project
+      project:  default
       source:
         repoURL: git@github.com:sfeir-open-source/sfeir-school-argocd.git
         targetRevision: "main"
