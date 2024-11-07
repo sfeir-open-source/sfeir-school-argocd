@@ -5,7 +5,7 @@ metadata:
 spec:
   description: Project bringing together all security configurations of api applications
   sourceRepos:
-    - 'git@github.com:MatClt/argocd-demo.git'
+    - 'git@github.com:sfeir-open-source/sfeir-school-argocd.git'
   destinations:
     - namespace: "api-dev"
       server: "https://kubernetes.default.svc"
